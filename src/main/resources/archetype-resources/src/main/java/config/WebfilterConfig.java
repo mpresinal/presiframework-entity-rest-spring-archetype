@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * El unico proposito de esta clase es, para que se pueda excluir del component scan cuando 
  * el servicio vaya hacer desplegado como una aplicacion monolitica.
  * 
- * @author Miguel Presinal <mpresinal@bancocaribe.com.do>
+ * @author Miguel Presinal <presinal378@gmail.com>
  * @since 1.0
  */
 @Configuration
