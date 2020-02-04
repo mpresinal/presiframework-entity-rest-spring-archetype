@@ -17,6 +17,7 @@ import com.presiframework.common.service.exception.InternalServiceException;
 import com.presiframework.common.datalayer.entities.exceptions.NoDataFoundException;
 import com.presiframework.commons.service.jpa.spring.AbstractJpaSpringCrudService;
 import com.presiframework.common.datalayer.entities.validator.EntityValidator;
+import com.presiframework.common.datalayer.entities.validator.AbstractEntityValidatorBeanValidation;
 import com.presiframework.common.datalayer.entities.validator.IntegrityValidator;
 
 import com.presiframework.common.datalayer.entities.validator.util.EntityValidatorUtil;
@@ -29,7 +30,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ${package}.entity.$jpaEntity;
 import ${package}.repository.$repository;
-import ${package}.searchcriteria.$searchCriteria;
+import $import java.util.Arrays;
+{package}.searchcriteria.$searchCriteria;
 /**
  *
  * @author Miguel Presinal <presinal378@gmail.com>
@@ -42,7 +44,7 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
     private static final Logger LOGGER = LoggerFactory.getLogger(${className}.class);
 
     private $repository repository;
-
+    private EntityValidator<$jpaEntity> entityValidator;
     
     public Logger getLogger() {
         return LOGGER;
@@ -95,8 +97,17 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
     }
 
     @Override
-    public EntityValidator<$jpaEntity> getEntityValidator() {        
-        return null;
+    public EntityValidator<$jpaEntity> getEntityValidator() {            
+        if (entityValidator == null) {
+            entityValidator = new AbstractEntityValidatorBeanValidation<$jpaEntity>() {
+                @Override
+                public List<?> getEntityReferences($jpaEntity entity) {
+                    return null;
+                }
+            };
+        }
+
+        return entityValidator;
     }
 
     @Override

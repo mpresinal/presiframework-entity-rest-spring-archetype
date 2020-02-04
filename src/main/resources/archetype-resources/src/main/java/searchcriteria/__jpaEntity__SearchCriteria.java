@@ -26,10 +26,12 @@ public class $className implements ExampleSearchCriteria<$jpaEntity> {
     private String name;
     private String status;
 
+    @Override
     public ExampleMatcher getMatcher() {
         return null;
     }
     
+    @Override
     public $jpaEntity getEntity() {
         return null;
     }

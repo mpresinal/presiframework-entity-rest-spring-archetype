@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* Apache Velocity variables */
 #set( $className = "${jpaEntity}EntityDtoMapper")
 #set($dto = "${jpaEntity}Dto")
@@ -16,7 +10,7 @@ import ${package}.entity.$jpaEntity;
 import ${package}.dto.$dto;
 
 /**
- * Mapper para convertir de EmpresaDto a Empresa y vice versa.
+ * Convert $jpaEntity to $dto and vice versa .
  * 
  * @author Miguel Presinal <presinal378@gmail.com>
  * @since 1.0
