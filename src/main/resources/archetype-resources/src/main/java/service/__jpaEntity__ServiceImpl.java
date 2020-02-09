@@ -30,8 +30,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ${package}.entity.$jpaEntity;
 import ${package}.repository.$repository;
-import $import java.util.Arrays;
-{package}.searchcriteria.$searchCriteria;
+import ${package}.searchcriteria.$searchCriteria;
+
 /**
  *
  * @author Miguel Presinal <presinal378@gmail.com>
