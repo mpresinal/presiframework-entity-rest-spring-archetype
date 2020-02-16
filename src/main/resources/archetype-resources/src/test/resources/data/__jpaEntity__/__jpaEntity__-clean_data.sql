@@ -4,4 +4,4 @@
  * Created: $date
  */
 
-DELETE FROM dbo.$tableName;
+DELETE FROM $tableName;

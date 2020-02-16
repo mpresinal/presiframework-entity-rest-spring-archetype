@@ -40,7 +40,7 @@ public class TestApplicationConfig {
         try {
             EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
             return dbBuilder.setType(EmbeddedDatabaseType.H2)
-            .setName(DB_NAME + ";LOCK_TIMEOUT=20000;INIT=CREATE SCHEMA IF NOT EXISTS dbo")            
+            .setName(DB_NAME + ";LOCK_TIMEOUT=20000")            
             .build();            
             
         } catch (Exception e){

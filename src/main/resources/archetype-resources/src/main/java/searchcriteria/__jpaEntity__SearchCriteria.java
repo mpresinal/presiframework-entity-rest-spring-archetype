@@ -10,9 +10,9 @@
 package ${package}.searchcriteria;
 
 import com.presiframework.common.datalayer.jpa.spring.repository.filter.ExampleSearchCriteria;
-
-import static com.presiframework.common.datalayer.entities.validator.util.EntityValidatorUtil.validateNotNullNotEmpty;
 import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatcher;
+import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 
 import ${package}.entity.$jpaEntity;
 
@@ -28,12 +28,17 @@ public class $className implements ExampleSearchCriteria<$jpaEntity> {
 
     @Override
     public ExampleMatcher getMatcher() {
-        return null;
+        return ExampleMatcher.matchingAll()
+                .withIgnoreCase()
+                .withMatcher("name", GenericPropertyMatcher.of(StringMatcher.CONTAINING));  
     }
     
     @Override
     public $jpaEntity getEntity() {
-        return null;
+        $jpaEntity entity = new $jpaEntity();
+        entity.setName(name);
+        entity.setStrStatus(status);
+        return entity;
     }
 
     public String getName() {
