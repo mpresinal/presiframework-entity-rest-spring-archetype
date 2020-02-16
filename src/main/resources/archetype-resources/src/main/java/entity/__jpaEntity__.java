@@ -24,9 +24,9 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @since 1.0
  */
 @Entity
-@Table(name = "$tableName", schema = "dbo")
+@Table(name = "$tableName")
 @AttributeOverrides({
-    @AttributeOverride(name = "id", column = @Column(name = "${tableName}_ID"))
+    @AttributeOverride(name = "id", column = @Column(name = "${tableName}_id"))
 })
 @Access(AccessType.PROPERTY)
 @Where(clause = "deleted = 0")
