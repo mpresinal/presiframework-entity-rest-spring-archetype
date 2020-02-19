@@ -17,7 +17,7 @@
     </root>
     
     <!-- Bcm seguridad file appender -->
-    <logger name="com.bancocaribe" additivity="false" level="INFO">
+    <logger name="${package}" additivity="false" level="INFO">
         <appender-ref ref="ASYNC-FILE" />  
     </logger>
     
