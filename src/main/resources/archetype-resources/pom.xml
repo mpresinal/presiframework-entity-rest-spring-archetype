@@ -217,8 +217,8 @@
                 <!-- Resource Server name -->
                 <rs.name>RS_SERVER_${jpaEntity.toUpperCase()}</rs.name>
                 <rs.app>APP</rs.app> <!-- This must be changed -->
-                <rs.key><![CDATA[Bcaribe01!]]></rs.key> <!-- This must be changed -->
-                <cors.allowed.origins>http://localhost:4200</cors.allowed.origins> <!-- This must be changed -->
+                <rs.key><![CDATA[Password1!]]></rs.key> <!-- This must be changed -->
+                <cors.allowed.origins>*</cors.allowed.origins> <!-- This must be changed -->
                 <cors.allowed.headers>*</cors.allowed.headers> 
               
                 <oauth.accesstoken.uri>http://localhost:8080/security/oauth/token</oauth.accesstoken.uri>
@@ -246,7 +246,7 @@
                 <!-- Resource Server name -->
                 <rs.name>RS_SERVER_${jpaEntity.toUpperCase()}</rs.name>
                 <rs.app>APP</rs.app> <!-- This must be changed -->
-                <rs.key><![CDATA[Bcaribe01!]]></rs.key> <!-- This must be changed -->
+                <rs.key><![CDATA[Password1!]]></rs.key> <!-- This must be changed -->
                 <cors.allowed.origins>http://localhost:4200</cors.allowed.origins> <!-- This must be changed -->
                 <cors.allowed.headers>*</cors.allowed.headers> 
               
@@ -275,7 +275,7 @@
                 <!-- Resource Server name -->
                 <rs.name>RS_SERVER_${jpaEntity.toUpperCase()}</rs.name>
                 <rs.app>APP</rs.app> <!-- This must be changed -->
-                <rs.key><![CDATA[Bcaribe01!]]></rs.key> <!-- This must be changed -->
+                <rs.key><![CDATA[Password1!]]></rs.key> <!-- This must be changed -->
                 <cors.allowed.origins>http://localhost:4200</cors.allowed.origins> <!-- This must be changed -->
                 <cors.allowed.headers>*</cors.allowed.headers> 
               
