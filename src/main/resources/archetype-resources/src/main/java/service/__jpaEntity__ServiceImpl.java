@@ -7,7 +7,8 @@
 #set( $className = "${jpaEntity}ServiceImpl")
 #set( $serviceInterface = "${jpaEntity}Service")
 #set( $repository = "${jpaEntity}Repository")
-#set ($searchCriteria = "${jpaEntity}SearchCriteria")
+#set( $searchCriteria = "${jpaEntity}SearchCriteria")
+#set( $integrityValidator = "${jpaEntity}IntegrityValidator")
 
 package ${package}.service;
 
@@ -31,10 +32,11 @@ import org.springframework.transaction.annotation.Transactional;
 import ${package}.entity.$jpaEntity;
 import ${package}.repository.$repository;
 import ${package}.searchcriteria.$searchCriteria;
+import ${package}.service.validator.$integrityValidator;
 
 /**
- *
- * @author Miguel Presinal <presinal378@gmail.com>
+ * 
+ * @author $developerName <$developerEmail>
  * @since 1.0
  */
 @Service
@@ -43,8 +45,15 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
 
     private static final Logger LOGGER = LoggerFactory.getLogger(${className}.class);
 
-    private $repository repository;
+    private final $repository repository;
     private EntityValidator<$jpaEntity> entityValidator;
+    private final $integrityValidator integrityalidator;
+    
+     @Autowired
+    public $className($repository repository, $integrityValidator integrityalidator) {
+        this.repository = repository;
+        this.integrityalidator = integrityalidator;
+    }
     
     public Logger getLogger() {
         return LOGGER;
@@ -93,7 +102,7 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
 
     @Override
     public IntegrityValidator<$jpaEntity> getIntegrityValidator() {        
-        return null;
+        return integrityalidator;
     }
 
     @Override
@@ -114,10 +123,4 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
     public $repository getRepository() {
         return repository;
     }
-
-    @Autowired
-    public void setRepository($repository repository) {
-        this.repository = repository;
-    }
-
 }

@@ -91,11 +91,11 @@ public class $className  extends DefaultCrudServiceTest<$jpaEntity, $searchCrite
         
         // Disabling all test. enable it according to your needs        
         config.setEnableTestExistingDataInstance(false);
-        config.setEnableTestsFlowRequiredFieldCreatedBy(false);
+        config.setEnableTestsFlowRequiredFieldCreatedBy(true);
         config.setEnableTestsFlowIntegrityViolation(false);
         config.setEnableTestsFlowExistingData(false);
-        config.setEnableTestsCreateFlowExistingData(false);
-        config.setEnableTestFlowSearchCriteriaStateIN(false);
+        config.setEnableTestsCreateFlowExistingData(true);
+        config.setEnableTestFlowSearchCriteriaStateIN(true);
         
         setTestConfig(config);
        
