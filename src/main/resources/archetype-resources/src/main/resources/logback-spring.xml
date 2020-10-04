@@ -16,7 +16,7 @@
         <appender-ref ref="CONSOLE" />
     </root>
     
-    <!-- Bcm seguridad file appender -->
+    <!-- file appender -->
     <logger name="${package}" additivity="false" level="INFO">
         <appender-ref ref="ASYNC-FILE" />  
     </logger>

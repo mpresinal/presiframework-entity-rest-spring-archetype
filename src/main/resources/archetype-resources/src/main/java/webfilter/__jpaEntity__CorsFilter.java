@@ -12,8 +12,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * Este filter autoriza los preflith de los cors request generado por los
- * navegadorres web cuando realiza una peticion a un recurso de otro dominio.
  *
  * @author Miguel Presinal <presinal378@gmail.com>
  * @since 1.0

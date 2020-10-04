@@ -32,16 +32,14 @@ import ${package}.searchcriteria.$searchCriteria;
 
 
 /**
- * Servicio Rest para la gestion de $jpaEntity
  * 
  * URI:
- * GET /$jpaEntity/{id}: Buscar por id.
- * GET /$jpaEntity: Buscar todo.
- * GET /$jpaEntity/filtrados: Buscar por criterios de busqueda.
- * GET /$jpaEntity?nombre: Buscar por nombre
- * POST /$jpaEntity: Crear.
- * PUT /$jpaEntity: Actualizar.
- * DELETE /$jpaEntity/{id}: Eliminar
+ * GET /$jpaEntity/{id}: find by id.
+ * GET /$jpaEntity: find all.
+ * GET /$jpaEntity/filter: find by criteria.
+ * POST /$jpaEntity: create.
+ * PUT /$jpaEntity: update.
+ * DELETE /$jpaEntity/{id}: delete
  * 
  * @author Miguel Presinal <presinal378@gmail.com>
  * @since 1.0

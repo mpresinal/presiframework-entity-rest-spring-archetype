@@ -33,7 +33,7 @@ public class $className extends SessionCheckFilter {
     //@Autowired
     public $className(
             @Value("#{'${sessioncheckfilter.excluded.path}'.split(',')}") List<String> excludedUrlList,
-            @Value("${sesioncheck.endpoint}")
+            @Value("${sessioncheck.endpoint}")
             String sesionCheckEndPointUrl) {
         super(excludedUrlList);
     }

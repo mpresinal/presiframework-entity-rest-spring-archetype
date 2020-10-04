@@ -4,9 +4,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Configuracion para los webfilter. 
- * El unico proposito de esta clase es, para que se pueda excluir del component scan cuando 
- * el servicio vaya hacer desplegado como una aplicacion monolitica.
+ * Webfilter configuration.
+ * The purpose of this config class is to allow this config to be skipped from
+ * any component scan when the service is deployed as a monolithic
+ * application 
  * 
  * @author Miguel Presinal <presinal378@gmail.com>
  * @since 1.0
