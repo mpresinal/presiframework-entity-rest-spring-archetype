@@ -61,8 +61,8 @@ public class $className extends AbstractJpaSpringCrudService<$jpaEntity, $search
 
     @Override
     @Transactional(readOnly = true)
-    public $jpaEntity findByNombre(String name) throws RequiredFieldException, NoDataFoundException, InternalServiceException {
-        final String METHOD = "findByNombre():: ";
+    public $jpaEntity findByName(String name) throws RequiredFieldException, NoDataFoundException, InternalServiceException {
+        final String METHOD = "findByName():: ";
         LOGGER.info(METHOD + "Enter");
         LOGGER.info(METHOD + "name = " + name);
 

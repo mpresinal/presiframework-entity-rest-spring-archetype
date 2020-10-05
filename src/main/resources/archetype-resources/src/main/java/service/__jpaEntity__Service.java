@@ -26,7 +26,7 @@ import ${package}.searchcriteria.$searchCriteria;
  */
 public interface $className extends JpaSpringCrudService<$jpaEntity, $searchCriteria> {
 
-    $jpaEntity findByNombre(String name) throws RequiredFieldException, NoDataFoundException, InternalServiceException;
+    $jpaEntity findByName(String name) throws RequiredFieldException, NoDataFoundException, InternalServiceException;
 
     List<$jpaEntity> findByStatus(String status) throws InternalServiceException;
 }
